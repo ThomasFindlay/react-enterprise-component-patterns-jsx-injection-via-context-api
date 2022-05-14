@@ -1,8 +1,9 @@
-import { useState, useRef } from 'react';
-import useOnClickOutside from 'use-onclickoutside';
-import { IoEllipsisVerticalSharp } from 'react-icons/io5';
+import { useState, useRef } from "react";
+import useOnClickOutside from "use-onclickoutside";
+import { IoEllipsisVerticalSharp } from "react-icons/io5";
+import styles from "./TableColumnActions.module.css";
 
-const TableColumnActions = (props) => {
+const TableColumnActions = props => {
   const { column, onViewData, onEditData, onDeleteData } = props;
   const popupRef = useRef(null);
   const [openActions, setOpenActions] = useState(false);
@@ -16,13 +17,13 @@ const TableColumnActions = (props) => {
       </div>
       {openActions ? (
         <div
-          className="absolute bg-white shadow border border-gray-400 z-50"
+          className="absolute bg-white shadow border border-gray-200 z-50 min-w-[8rem]"
           ref={popupRef}
         >
-          <ul className="py-2">
+          <ul className={styles.actionsMenu}>
             <li>
               <button
-                className="px-4 py-1 hover:bg-gray-100 cursor-pointer w-full"
+                className={styles.actionsMenuButton}
                 onClick={() => {
                   setOpenActions(false);
                   onViewData(column);
@@ -33,7 +34,7 @@ const TableColumnActions = (props) => {
             </li>
             <li>
               <button
-                className="px-4 py-1 hover:bg-gray-100 cursor-pointer w-full"
+                className={styles.actionsMenuButton}
                 onClick={() => {
                   setOpenActions(false);
                   onEditData(column);
@@ -44,7 +45,7 @@ const TableColumnActions = (props) => {
             </li>
             <li>
               <button
-                className="px-4 py-1 hover:bg-gray-100 cursor-pointer w-full"
+                className={styles.actionsMenuButton}
                 onClick={() => {
                   setOpenActions(false);
                   onDeleteData(column);
