@@ -1,8 +1,8 @@
-import TableHeader from './TableHeader';
-import TableColumn from './TableColumn';
+import TableHeader from "./TableHeader";
+import TableColumn from "./TableColumn";
 
-const TableRow = (props) => {
-  const { columns, header, onViewData, onEditData, onDeleteData } = props;
+const TableRow = props => {
+  const { row, columns, header, onViewData, onEditData, onDeleteData } = props;
   const CellComponent = header ? TableHeader : TableColumn;
   return (
     <tr className="even:bg-gray-50 hover:bg-blue-50">
@@ -11,6 +11,7 @@ const TableRow = (props) => {
           <CellComponent
             key={idx}
             column={column}
+            row={row}
             onViewData={onViewData}
             onEditData={onEditData}
             onDeleteData={onDeleteData}

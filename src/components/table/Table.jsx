@@ -1,7 +1,7 @@
-import TableHeader from './components/TableHeader';
-import TableRow from './components/TableRow';
+import TableHeader from "./components/TableHeader";
+import TableRow from "./components/TableRow";
 
-const Table = (props) => {
+const Table = props => {
   const { options, onViewData, onEditData, onDeleteData } = props;
   const { headers, rows } = options;
   return (
@@ -10,9 +10,10 @@ const Table = (props) => {
         <TableRow header columns={headers} />
       </thead>
       <tbody>
-        {rows.map((row) => {
+        {rows.map(row => {
           return (
             <TableRow
+              row={row}
               columns={row.columns}
               key={row.id}
               onViewData={onViewData}

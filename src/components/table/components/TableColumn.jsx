@@ -1,12 +1,13 @@
-import TableColumnActions from './TableColumnActions';
+import TableColumnActions from "./TableColumnActions";
 
-const TableColumn = (props) => {
-  const { column, onViewData, onEditData, onDeleteData } = props;
+const TableColumn = props => {
+  const { row, column, onViewData, onEditData, onDeleteData } = props;
 
   return (
     <td className="px-4 py-1">
-      {column.column === 'Actions' ? (
+      {column.column === "Actions" ? (
         <TableColumnActions
+          row={row}
           column={column}
           onViewData={onViewData}
           onEditData={onEditData}
