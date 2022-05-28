@@ -38,13 +38,13 @@ function App() {
           }) => {
             switch (row.id) {
               case "1": {
-                return [renderViewMenuItem()];
+                return [renderViewMenuItem(onViewData)];
               }
               case "2": {
                 return [
-                  renderViewMenuItem(),
-                  renderEditMenuItem(),
-                  renderDeleteMenuItem(),
+                  renderViewMenuItem(onViewData),
+                  renderEditMenuItem(onEditData),
+                  renderDeleteMenuItem(onDeleteData),
                   <React.Fragment key="menu-item-report">
                     <hr className="my-2" />
                     <li>
@@ -62,17 +62,16 @@ function App() {
                 ];
               }
               default: {
-                return renderDefaultMenu();
+                return renderDefaultMenu({
+                  onViewData,
+                  onEditData,
+                  onDeleteData,
+                });
               }
             }
           }}
         >
-          <Table
-            options={tableOptions}
-            onViewData={onViewData}
-            onEditData={onEditData}
-            onDeleteData={onDeleteData}
-          />
+          <Table options={tableOptions} />
         </TableActionsContextProvider>
       </main>
     </div>
