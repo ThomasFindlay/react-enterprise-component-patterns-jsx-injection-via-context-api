@@ -1,0 +1,7 @@
+.actionsMenu {
+  @apply py-2;
+}
+
+.actionsMenuButton {
+  @apply px-4 py-1 hover:bg-gray-100 cursor-pointer w-full text-left;
+}

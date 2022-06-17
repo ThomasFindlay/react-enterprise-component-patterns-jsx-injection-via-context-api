@@ -1,66 +1,66 @@
 export const tableOptions = {
-  headers: ['ID', 'Name', 'Last Name', 'Actions'],
+  headers: ["ID", "Name", "Last Name", "Actions"],
   rows: [
     {
-      id: '1',
+      id: "1",
       columns: [
         {
-          column: 'ID',
-          text: '1',
+          column: "ID",
+          text: "1",
         },
         {
-          column: 'Name',
-          text: 'John',
+          column: "Name",
+          text: "John",
         },
         {
-          column: 'Last Name',
-          text: 'John',
+          column: "Last Name",
+          text: "John",
         },
         {
-          column: 'Actions',
-          text: '',
+          column: "Actions",
+          text: "",
         },
       ],
     },
     {
-      id: '2',
+      id: "2",
       columns: [
         {
-          column: 'ID',
-          text: '2',
+          column: "ID",
+          text: "2",
         },
         {
-          column: 'Name',
-          text: 'Melissa',
+          column: "Name",
+          text: "Melissa",
         },
         {
-          column: 'Last Name',
-          text: 'John',
+          column: "Last Name",
+          text: "Lark",
         },
         {
-          column: 'Actions',
-          text: '',
+          column: "Actions",
+          text: "",
         },
       ],
     },
     {
-      id: '3',
+      id: "3",
       columns: [
         {
-          column: 'ID',
-          text: '2',
+          column: "ID",
+          text: "3",
         },
         {
-          column: 'Name',
-          text: 'Mark',
+          column: "Name",
+          text: "Mark",
         },
         {
-          column: 'Last Name',
-          text: 'Smith',
+          column: "Last Name",
+          text: "Smith",
         },
         {
-          column: 'Actions',
-          text: '',
+          column: "Actions",
+          text: "",
         },
       ],
     },
